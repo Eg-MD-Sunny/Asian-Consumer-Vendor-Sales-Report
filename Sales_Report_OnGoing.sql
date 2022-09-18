@@ -7,14 +7,11 @@ SELECT
 	ThingRequest.SalePrice SalePrice,
 	COUNT (ProductVariant.Id) Quantity
 	
-
-
 FROM
 	ProductVariant
 	Join ThingRequest on ThingRequest.ProductVariantId = ProductVariant.Id
 	Join Thing on ThingRequest.AssignedThingId = Thing.Id
 	Join Shipment on ThingRequest.ShipmentId = Shipment.Id
-
 
 WHERE
 	ProductVariant.Id in (16297,27207,2191,16292,6711,6710,27418,21630)
